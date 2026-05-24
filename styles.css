@@ -1,3 +1,18 @@
-.divContenido{
-    border: solid 3px orange;
+.divContenido {
+  border: solid 3px orange;
+}
+
+.guitarras {
+ display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+
+  width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.card {
+  border: solid 1px black;
+  width: 400px;
+  height: 400px;
 }
