@@ -33,8 +33,23 @@
 
 
     <h1>Guitarras disponibles</h1>
+    <div>
+      <input type="text" name="buscador" id="buscador" placeholder="buscar guitarra por marca">
+      <ul id="resultado"></ul>
+    </div>
+    <div>
+      <p>Añadir guitarra</p>
+      <input type="text" name="marca" id="marca" placeholder="Marca de la guitarra">
+      <input type="text" name="modelo" id="modelo" placeholder="Modelo de la guitarra">
+      <input type="number" name="precio" id="precio" placeholder="precio de la guitarra">
+      <select name="tipo" id="tipo">
+        <option value="default">seleccione la opción</option>
+        <option value="electrica">eléctrica</option>
+        <option value="acústica">Acústica</option>
+      </select>
+      <button id="insertar">Insertar guitarra</button>
+    </div>
     <div id="contenedor-guitarras" class="guitarras"></div>
-
     </div>
     <script src="script.js"></script>
   </body>

@@ -67,11 +67,43 @@ const guitarras = [
     modelo: "prueba array",
     tipo: "Acustica",
     precio: 500,
-  },
+  },  
 ];
+
+const buscador = document.querySelector("#buscador")
+buscador.addEventListener("input", filtrarguitarras);
+function filtrarguitarras(){
+  let texto = buscador.value
+  let resultado = guitarras.filter(guitarra => guitarra.marca === texto)
+  let html =""
+  for(let i = 0; i<resultado.length; i++){
+    html += `
+    <li>${resultado[i].marca} ${resultado[i].modelo}</li>
+    `;
+  }
+  document.querySelector("#resultado").innerHTML = html
+}
+
 
 let largo = guitarras.length;
 console.log(largo);
+function insertarguitarra(){
+  let marca = document.querySelector("#marca").value
+  let modelo = document.querySelector("#modelo").value
+  let precio = document.querySelector("#precio").value
+  let tipo = document.querySelector("#tipo").value
+
+  let nuevaguitarra = {
+    marca: marca,
+    modelo: modelo,
+    precio: precio,
+    tipo: tipo,
+  };
+  guitarras.push(nuevaguitarra)
+  pintarGuitarra();
+}
+let insertar = document.querySelector("#insertar")
+insertar.addEventListener("click", insertarguitarra);
 
 function pintarGuitarra() {
     let html = "";
